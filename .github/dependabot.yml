@@ -1,7 +1,6 @@
 version: 2
 updates:
 
-
 - package-ecosystem: docker
   directory: "/"
   schedule:
@@ -10,9 +9,9 @@ updates:
     timezone: "Europe/London"
   open-pull-requests-limit: 99
   reviewers:
-  - credfeto
+  - bradtho
   assignees:
-  - credfeto
+  - bradtho
   allow:
   - dependency-type: all
   commit-message:
