@@ -112,7 +112,7 @@ jobs:
     steps:
       - run: |
           sudo chown -R $USER:$USER $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: github/super-linter@v4.8.1
