@@ -1,6 +1,7 @@
 name: Reusable workflow example
 
 on:
+  workflow_dispatch:
   workflow_call:
     inputs:
       greeting:
@@ -9,10 +10,10 @@ on:
 
 jobs:
   example_job:
-    name: Pass input and secrets to my-action
+    name: Pass greeting input to hello action
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/hello@main
+      - uses: ./.github/actions/hello
         with:
           greeting: ${{ inputs.greeting }}
