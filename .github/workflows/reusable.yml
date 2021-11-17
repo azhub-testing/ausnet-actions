@@ -17,6 +17,6 @@ jobs:
       #Documentated syntax fails to run as expected.
       #Workaround is to reference the full URI
       #- uses: ./.github/actions/hello
-      - uses: ausnet-testing/ausnet/.github/actions/hello@main
+      - uses: ausnet-testing/ausnet-actions/.github/actions/hello@main
         with:
           greeting: ${{ inputs.greeting }}
