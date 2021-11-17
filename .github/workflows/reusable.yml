@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/hello
+      - uses: ../.github/actions/hello
         with:
           greeting: ${{ inputs.greeting }}
