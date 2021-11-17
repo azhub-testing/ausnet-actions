@@ -15,7 +15,7 @@ echo     \</startup\>  >> sqlformatter/SqlFormatter.exe.config
 echo \</configuration\> >> sqlformatter/SqlFormatter.exe.config
 
 echo Changing File Extension
-find ./ -iname '*.tsql' -type f -exec bash -c 'for f in *.tsql; do mv -- "$f" "${f%.tsql}.sql"; done' {} \;
+find ./ -iname '*.tsql' -type f -exec bash -c 'mv "$0" "${0%.tsql}".sql' {} \;
 
 echo Reformatting files
 find ./ -iname '*.sql' -type f -exec bash -c 'mono sqlformatter/SqlFormatter.exe "$0" /is:"    " /tc /sk /r /sac /mw:999999999 /b- /bjo /cb:1 /st:4 /eil- /ecs- /ecl /uk /sb:2 /ebc /ebe' {} \;
@@ -24,7 +24,7 @@ echo Converting tabs to spaces
 find ./ -iname '*.sql' -type f -exec bash -c 'expand -t 4 "$0" | sponge "$0"' {} \;
 
 echo Changing File Extension back again
-find ./ -iname '*.sql' -type f -exec bash -c 'for f in *.sql; do mv -- "$f" "${f%.sql}.tsql"; done' {} \;
+find ./ -iname '*.sql' -type f -exec bash -c 'mv "$0" "${0%.sql}".tsql' {} \;
 
 rm -fr sqlformatter
 rm -fr sqlformatter.zip
