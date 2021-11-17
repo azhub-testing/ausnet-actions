@@ -3,6 +3,7 @@
 Reformats TSQL files using [Poor Man's TSQL Formatter](http://architectshack.com/PoorMansTSqlFormatter.ashx).
 
 ## How to use it?
+
 This is a Github action, so it has to be added to a github workflow.  
 
 A simple example of running this action on all pushes to the repository would be
@@ -36,4 +37,4 @@ jobs:
           branch: ${{ github.ref }}
 ```
 
-On each push, it will reformat the SQL.  Note you'll need to commit and push any commits back to your github repo. 
+On each push, it will reformat the SQL.  Note you'll need to commit and push any commits back to your github repo.
