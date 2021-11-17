@@ -12,6 +12,8 @@ jobs:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
     steps:
+    # Checkout the repository to the GitHub Actions runner
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/hello@main
         with:
           greeting: ${{ inputs.username }}
