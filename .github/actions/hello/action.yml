@@ -1,0 +1,13 @@
+name: "Hello Action"
+
+description: "Say hello with GitHub Actions"
+
+inputs:
+  greeting:
+    description: "Who would you like to greet in the console"
+    required: true
+    default: "Mona"
+
+runs:
+  using: "node12"
+  main: "main.js"
