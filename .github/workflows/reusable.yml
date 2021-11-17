@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       #Documentated syntax fails to run as expected.
-      #Workaround is to reference the full URI
+      #Workaround is to reference the full URI orgID/repoID/.github/actions/actionName@branch
       #- uses: ./.github/actions/hello
-      - uses: ausnet-testing/ausnet-actions/.github/actions/hello@main
+      - uses: azhub-testing/ausnet-actions/.github/actions/hello@main
         with:
           greeting: ${{ inputs.greeting }}
