@@ -13,7 +13,7 @@ jobs:
     name: Pass greeting input to hello action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: azhub-testing/ausnet-actions/.github/actions/hello@main
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/hello
         with:
           greeting: ${{ inputs.greeting }}
